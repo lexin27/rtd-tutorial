@@ -12,13 +12,17 @@ version = '0.1.0'
 # -- General configuration
 
 extensions = [
+    'sphinx_gallery.gen_gallery',
     'sphinx.ext.duration',
     'sphinx.ext.doctest',
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
-    'sphinx.ext.intersphinx',
+    'sphinx.ext.intersphinx'
 ]
-
+sphinx_gallery_conf = {
+     'examples_dirs': '../../examples',   # path to your example scripts
+     'gallery_dirs': 'auto_examples',  # path to where to save gallery generated output
+}
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),
     'sphinx': ('https://www.sphinx-doc.org/en/master/', None),
